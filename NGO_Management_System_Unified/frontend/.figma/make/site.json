@@ -1,0 +1,10 @@
+{
+  "description": "Streamline NGO operations with a comprehensive management system designed for Hope Foundation, featuring multiple modules for efficient organization and support.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,15 @@
+# Optional: local PostgreSQL with the schema pre-loaded.  docker compose up -d db
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ngo_app
+      POSTGRES_PASSWORD: change-me
+      POSTGRES_DB: ngo_management
+    ports: ["5432:5432"]
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
